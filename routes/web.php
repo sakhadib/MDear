@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\signup_Controller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/signup', [signup_Controller::class, 'index']);
+Route::post('/signup', [signup_Controller::class, 'store']);
