@@ -49,14 +49,28 @@
               
             </ul>
             <hr>
+            @if(session('is_logged_in'))
+
             <ul class="navbar-nav me-0 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    <a class="nav-link" href="/profile">
+                      <img src="/rsx/avatar/{{session('image')}}" alt="" class="profile_head">
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i> Signup</a>
+                    <a class="nav-link" href="/logout"><i class="fa-solid fa-sign-out"></i> Logout</a>
                 </li>
             </ul>
+            @else
+            <ul class="navbar-nav me-0 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup"><i class="fa-solid fa-user-plus"></i> Signup</a>
+                </li>
+            </ul>
+            @endif
           </div>
         </div>
       </nav>
@@ -66,5 +80,12 @@
             .bg-head {
                 background-color: rgba(0, 0, 0, 0.6);
                 backdrop-filter: blur(5px);
+            }
+            .profile_head {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                border: 3px solid #ffffff;
             }
       </style>

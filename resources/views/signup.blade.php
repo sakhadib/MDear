@@ -6,7 +6,11 @@
             <div class="col-md-8 offset-md-2">
                 <div class="signup-box">
                     <h1 class="display-5 text-light mb-4">Signup to start creating <strong>mdears</strong></h1>
-
+                    @if(session('error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('error') }}
+                        </div>
+                    @endif
                     <form action="/signup" method="post">
                         @csrf
                         <div class="row mt-1">
