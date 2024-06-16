@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\signup_Controller;
 use App\Http\Controllers\login_Controller;
 use App\Http\Controllers\dashboard_Controller;
+use App\Http\Controllers\mdear_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,6 @@ Route::post('/login', [login_Controller::class, 'login']);
 Route::get('/logout', [login_Controller::class, 'logout']);
 
 Route::get('/dashboard', [dashboard_Controller::class, 'index']);
+
+Route::get('/create', [mdear_Controller::class, 'index']);
+Route::post('/create', [mdear_Controller::class, 'store']);

@@ -35,7 +35,7 @@
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Create New</a>
+                <a class="nav-link" href="/create">Create New</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">My mdears</a>
@@ -53,7 +53,7 @@
 
             <ul class="navbar-nav me-0 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/profile">
+                    <a class="nav-link" href="/dashboard">
                       <img src="/rsx/avatar/{{session('image')}}" alt="" class="profile_head">
                     </a>
                 </li>
